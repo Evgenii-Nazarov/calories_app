@@ -4,7 +4,7 @@ function ListItem(props) {
     const counter = props.el;
 
     const buttonPlusHandler = () => {
-        props.counterPlus('ewwwq');
+        props.counterPlus(props.index);
     }
 
     return (
