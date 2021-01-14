@@ -1,0 +1,1 @@
+{"version":3,"sources":["App.css"],"names":[],"mappings":"AAAA,WACI,eAAgB,CAChB,SACJ,CAEA,MACI,UACJ,CAEA,aACI,kCACJ,CAEA,iBACI,UACJ","file":"main.5df883ac.chunk.css","sourcesContent":[".my-search {\n    min-height: 80px;\n    width: 80%\n}\n\n.card {\n    width: 100%;\n}\n\n.my-progress {\n    background-color: #cfdeed !important;\n}\n\n.my-input-number {\n    width: 50px\n}"]}

@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/calories_app/static/css/main.5df883ac.chunk.css",
+    "main.js": "/calories_app/static/js/main.3c70ee32.chunk.js",
+    "main.js.map": "/calories_app/static/js/main.3c70ee32.chunk.js.map",
+    "runtime-main.js": "/calories_app/static/js/runtime-main.6c03dcb4.js",
+    "runtime-main.js.map": "/calories_app/static/js/runtime-main.6c03dcb4.js.map",
+    "static/css/2.95258f03.chunk.css": "/calories_app/static/css/2.95258f03.chunk.css",
+    "static/js/2.845d2d32.chunk.js": "/calories_app/static/js/2.845d2d32.chunk.js",
+    "static/js/2.845d2d32.chunk.js.map": "/calories_app/static/js/2.845d2d32.chunk.js.map",
+    "index.html": "/calories_app/index.html",
+    "precache-manifest.0d1448aa182f8be13c211eecd72a7817.js": "/calories_app/precache-manifest.0d1448aa182f8be13c211eecd72a7817.js",
+    "service-worker.js": "/calories_app/service-worker.js",
+    "static/css/2.95258f03.chunk.css.map": "/calories_app/static/css/2.95258f03.chunk.css.map",
+    "static/css/main.5df883ac.chunk.css.map": "/calories_app/static/css/main.5df883ac.chunk.css.map",
+    "static/js/2.845d2d32.chunk.js.LICENSE.txt": "/calories_app/static/js/2.845d2d32.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6c03dcb4.js",
+    "static/css/2.95258f03.chunk.css",
+    "static/js/2.845d2d32.chunk.js",
+    "static/css/main.5df883ac.chunk.css",
+    "static/js/main.3c70ee32.chunk.js"
+  ]
+}
