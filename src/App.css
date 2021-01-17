@@ -1,16 +1,15 @@
 .my-search {
-    min-height: 80px;
-    width: 80%
+  min-height: 80px;
 }
 
 .card {
-    width: 100%;
+  width: 100%;
 }
 
 .my-progress {
-    background-color: #cfdeed !important;
+  background-color: #cfdeed !important;
 }
 
 .my-input-number {
-    width: 50px
+  width: 50px;
 }
