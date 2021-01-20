@@ -1,6 +1,6 @@
 export const list = [];
 
 export const headers = {
-  'x-rapidapi-key': '80b329bd34msh754db68911417eep17038bjsned68b78e75b7',
-  'x-rapidapi-host': 'nutritionix-api.p.rapidapi.com',
+  'x-app-id': '1fff69a6',
+  'x-app-key': '09eaf2175118b9b569725803966b1a08',
 };

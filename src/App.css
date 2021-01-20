@@ -13,3 +13,13 @@
 .my-input-number {
   width: 50px;
 }
+
+.option-img {
+  max-width:100%;
+  max-height:100%;
+}
+
+.my-option {
+  width: 350px;
+  border: 1px solid black;
+}

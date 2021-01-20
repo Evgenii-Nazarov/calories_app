@@ -6,9 +6,9 @@ const ListItem = props => {
   const item = get(props, 'item', {});
   const _id = get(item, '_id', '');
   const qnt = get(item, 'qnt', 0);
-  const name = get(item, 'fields.item_name', '');
-  const brandName = get(item, 'fields.brand_name', '');
-  const calories = Math.round(get(item, 'fields.nf_calories', 0));
+  const name = get(item, 'itemName', '');
+  const brandName = get(item, 'brandName', '');
+  const calories = Math.round(get(item, 'calories', 0));
 
   const onInputChange = e => {
     props.changeValue(_id, +e.target.value);

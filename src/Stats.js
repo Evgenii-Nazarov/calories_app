@@ -4,11 +4,10 @@ import { get } from 'lodash';
 
 const Stats = props => {
   const counters = get(props, 'counters', []);
+  const totalCalories = counters.reduce((acc, el) => {
+    return acc + Math.round(el.calories) * el.qnt;
+  }, 0);
 
-  const totalCalories = counters.reduce(
-    (acc, el) => acc + Math.round(el.fields.nf_calories) * el.qnt,
-    0
-  );
   const percent = Math.round((totalCalories * 100) / 3000);
 
   const percentClass = () => {
