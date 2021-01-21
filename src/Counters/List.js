@@ -1,20 +1,42 @@
 import React from 'react';
 import { get } from 'lodash';
 import ListItem from './ListItem';
-import { Row } from 'reactstrap';
+import { ListGroup, ListGroupItem, Row } from 'reactstrap';
 
 const List = props => {
   const counters = get(props, 'counters', []);
+
   return (
     <Row>
-      {counters.map(el => (
-        <ListItem
-          key={el._id}
-          item={el}
-          deleteCounter={props.deleteCounter}
-          changeValue={props.changeValue}
-        />
-      ))}
+      <ListGroup>
+        <ListGroupItem>Breakfast</ListGroupItem>
+        {counters.map(el => (
+          <ListItem
+            key={el._id}
+            item={el}
+            deleteCounter={props.deleteCounter}
+            changeValue={props.changeValue}
+          />
+        ))}
+        <ListGroupItem>Lunch</ListGroupItem>
+        {counters.map(el => (
+          <ListItem
+            key={el._id}
+            item={el}
+            deleteCounter={props.deleteCounter}
+            changeValue={props.changeValue}
+          />
+        ))}
+        <ListGroupItem>Diner</ListGroupItem>
+        {counters.map(el => (
+          <ListItem
+            key={el._id}
+            item={el}
+            deleteCounter={props.deleteCounter}
+            changeValue={props.changeValue}
+          />
+        ))}
+      </ListGroup>
     </Row>
   );
 };

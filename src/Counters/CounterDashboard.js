@@ -4,6 +4,7 @@ import { get } from 'lodash';
 
 const CounterDashboard = props => {
   const counters = get(props, 'counters', []);
+
   return (
     <>
       <List

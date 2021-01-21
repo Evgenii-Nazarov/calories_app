@@ -3,7 +3,7 @@ import Select from 'react-select';
 import { debounce, get } from 'lodash';
 import { getDishByName } from '../query';
 
-const FormSelect = props => {
+const CustomSelect = props => {
   const selectValue = get(props, 'selectValue', '');
   const options = get(props, 'options', []);
 
@@ -28,10 +28,11 @@ const FormSelect = props => {
         const itemCarbs = itemNutrients.find(nutrient => nutrient.attr_id === 205) || {};
 
         return {
-          _id: el.nix_item_id || '',
-          itemName: el.brand_name_item_name || '',
-          brandName: el.brand_name || '',
-          calories: el.nf_calories || '',
+          _id: get(el, 'nix_item_id', ''),
+          itemName: get(el, 'brand_name_item_name', ''),
+          brandName: get(el, 'brand_name', ''),
+          calories: get(el, 'nf_calories', ''),
+          photo: get(el, 'photo.thumb', ''),
           fat: itemFat.value || 0,
           protein: itemProtein.value || 0,
           carbs: itemCarbs.value || 0,
@@ -42,15 +43,6 @@ const FormSelect = props => {
       props.changeOptions(formattedOptions);
     }
   };
-
-  // const debounceFn = debounce(fetchOnInput, 500);
-  //
-  // const onInputChangeDebounce = (value, action) => {
-  //   if (action.action === 'input-change') {
-  //     setIsLoading(true);
-  //     debounceFn(value);
-  //   }
-  // };
 
   const onInputChangeDebounce = debounce((value, action) => {
     if (action.action === 'input-change') {
@@ -82,4 +74,4 @@ const FormSelect = props => {
   );
 };
 
-export default FormSelect;
+export default CustomSelect;
