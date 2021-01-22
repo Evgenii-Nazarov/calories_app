@@ -1,35 +1,24 @@
-.card {
-  width: 100%;
-}
-
 .my-progress {
   background-color: #cfdeed !important;
 }
 
-.my-input-number {
-  width: 50px;
-}
-
-.option-img {
-  float: left;
+.my-image{
   max-width: 100%;
-}
-
-.my-option {
-  width: 350px;
-  border: 1px solid black;
+  height: auto
 }
 
 .my-list-item {
   padding: 0;
-  font-size: 80%;
-}
-
-.list-group-item {
-  /*padding: 0;*/
+  font-size: 90%;
 }
 
 .my-logo-text {
-  /*border: 1px black solid*/
   color: #6c757d;
+}
+
+.brand-color {
+  color:#636363;
+  font-variant: small-caps;
+  font-weight: 700;
+  font-size: 70%;
 }

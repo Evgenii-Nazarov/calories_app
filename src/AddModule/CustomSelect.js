@@ -9,10 +9,9 @@ const CustomSelect = props => {
 
   const [isLoading, setIsLoading] = useState(false);
 
-  // customising Option in react-select
   const optionsFormatted = options.map(el => ({
     value: el._id,
-    label: `${el.itemName} ${el.brandName} calories: ${el.calories}`,
+    label: `${el.itemName} calories: ${el.calories}`,
   }));
 
   const fetchOnInput = async value => {

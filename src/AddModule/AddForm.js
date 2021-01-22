@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-import { Button, Col, Form, FormGroup, Input, Label, Row } from 'reactstrap';
-import MyModal from '../MyModal';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCarrot } from '@fortawesome/free-solid-svg-icons';
+import { Button, Col, Input, Row } from 'reactstrap';
 import CustomSelect from './CustomSelect';
 
 const AddForm = props => {
   const [selectValue, setSelectValue] = useState('');
   const [options, setOptions] = useState([]);
-  const [aboutModal, setAboutModal] = useState(false);
+  const [mealTypeSelectValue, setMealTypeSelectValue] = useState('breakfast');
 
   const changeOptions = newOptions => {
     setOptions(newOptions);
@@ -20,17 +17,15 @@ const AddForm = props => {
 
   const addButtonHandler = () => {
     const selectedItem = options.find(el => el._id === selectValue.value);
-    props.addCounter(selectedItem);
-  };
-
-  const changeModalState = () => {
-    setAboutModal(!aboutModal);
+    props.addCounter({ newCounter: selectedItem, mealType: mealTypeSelectValue });
+    setSelectValue('');
+    setOptions([]);
   };
 
   return (
     <>
-      <Row className="mb-4">
-        <Col className="pr-1 p-0" lg={7} xl={7}>
+      <Row className="mb-2 pb-4">
+        <Col xs={12} md={7} lg={7} xl={7} className="pb-1">
           <CustomSelect
             selectValue={selectValue}
             changeSelectValue={changeSelectValue}
@@ -38,14 +33,20 @@ const AddForm = props => {
             changeOptions={changeOptions}
           />
         </Col>
-        <Col className="pr-1 p-0" lg={3} xl={2}>
-          <Input type="select" name="select" id="exampleSelect">
-            <option>Breakfast</option>
-            <option>Lunch</option>
-            <option>Diner</option>
+        <Col xs={8} md={3} lg={3} xl={3}>
+          <Input
+            onChange={e => setMealTypeSelectValue(e.target.value)}
+            value={mealTypeSelectValue}
+            type="select"
+            name="select"
+            id="exampleSelect"
+          >
+            <option value={'breakfast'}>Breakfast</option>
+            <option value={'lunch'}>Lunch</option>
+            <option value={'diner'}>Diner</option>
           </Input>{' '}
         </Col>
-        <Col className="p-0" lg={2}>
+        <Col xs={4} md={2} lg={2} xl={2}>
           <Button
             disabled={selectValue === ''}
             className="btn-block text-white"
@@ -54,42 +55,6 @@ const AddForm = props => {
             Add
           </Button>
         </Col>
-      </Row>
-
-      {/*<Row>*/}
-      {/*  <Col lg={5}>*/}
-      {/*    <Input type="select" name="select" id="exampleSelect">*/}
-      {/*      <option>Breakfast</option>*/}
-      {/*      <option>Lunch</option>*/}
-      {/*      <option>Diner</option>*/}
-      {/*    </Input>{' '}*/}
-      {/*  </Col>*/}
-      {/*  <Col lg={1}>*/}
-      {/*    <Button disabled={selectValue === ''} className=" text-white" onClick={addButtonHandler}>*/}
-      {/*      Add*/}
-      {/*    </Button>*/}
-      {/*  </Col>*/}
-      {/*</Row>*/}
-
-      <Row>
-        {/*<Col xs={{ size: 4, offset: 0 }}>*/}
-        {/*  <FormSelect*/}
-        {/*    selectValue={selectValue}*/}
-        {/*    changeSelectValue={changeSelectValue}*/}
-        {/*    options={options}*/}
-        {/*    changeOptions={changeOptions}*/}
-        {/*  />*/}
-        {/*</Col>*/}
-        {/*<Col xs={1}>*/}
-        {/*  <Button disabled={selectValue === ''} className=" text-white" onClick={addButtonHandler}>*/}
-        {/*    Add*/}
-        {/*  </Button>*/}
-        {/*</Col>*/}
-        {/*<Col xs={1}>*/}
-        {/*  <Button className=" text-white" onClick={changeModalState}>*/}
-        {/*    About*/}
-        {/*  </Button>*/}
-        {/*</Col>*/}
       </Row>
     </>
   );

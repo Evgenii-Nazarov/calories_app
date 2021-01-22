@@ -12,11 +12,9 @@ export const getDishByName = ingredient => {
   return axios
     .request(options)
     .then(function (response) {
-      // console.log(response.data);
       return response.data;
     })
     .catch(function (error) {
       console.error(error);
-      // throw new Error('ERROR http');
     });
 };
