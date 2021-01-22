@@ -1,5 +1,5 @@
 {
-  "name": "react_roup",
+  "name": "calories_app",
   "version": "0.1.0",
   "private": true,
   "homepage": ".",
@@ -7,11 +7,6 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/react-fontawesome": "^0.1.14",
-    "@nivo/core": "^0.67.0",
-    "@nivo/pie": "^0.67.0",
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.2",
     "lodash": "^4.17.20",
