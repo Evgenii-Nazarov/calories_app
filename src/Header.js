@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Badge, Col, Progress, Row, Jumbotron, Container, Button } from 'reactstrap';
-import { get } from 'lodash';
+import { Button, Col, Row } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCarrot } from '@fortawesome/free-solid-svg-icons';
 import MyModal from './MyModal';
