@@ -1,7 +1,7 @@
 import React from 'react';
 import { get } from 'lodash';
 import ListItem from './ListItem';
-import { Col, ListGroup, ListGroupItem, Row } from 'reactstrap';
+import { ListGroup, ListGroupItem } from 'reactstrap';
 
 const List = props => {
   const counters = get(props, 'counters', []);
