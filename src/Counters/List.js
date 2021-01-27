@@ -18,10 +18,8 @@ const List = props => {
   return (
     <ListGroup className="my-logo-text">
       <ListGroupItem className="d-block">
-        <Row>
-          <Col xs={3}>Breakfast</Col>
-          <Col>{breakfastCalories} cal</Col>
-        </Row>
+        <span className="mr-2">Breakfast</span>
+        <span>{breakfastCalories} cal</span>
       </ListGroupItem>
       {breakfastItems.map(el => (
         <ListItem
@@ -33,10 +31,8 @@ const List = props => {
       ))}
 
       <ListGroupItem>
-        <Row>
-          <Col xs={2}>Lunch</Col>
-          <Col>{lunchCalories} cal</Col>
-        </Row>
+        <span className="mr-2">Lunch</span>
+        <span>{lunchCalories} cal</span>
       </ListGroupItem>
       {lunchItems.map(el => (
         <ListItem
@@ -48,10 +44,8 @@ const List = props => {
       ))}
 
       <ListGroupItem>
-        <Row>
-          <Col xs={2}>Diner</Col>
-          <Col>{dinerCalories} cal</Col>
-        </Row>
+        <span className="mr-2">Diner</span>
+        <span>{dinerCalories} cal</span>
       </ListGroupItem>
 
       {dinerItems.map(el => (

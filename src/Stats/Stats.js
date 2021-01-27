@@ -18,17 +18,17 @@ const Stats = props => {
         <Col
           xs={{ size: 12, offset: 0 }}
           md={{ size: 8, offset: 0 }}
-          lg={{ size: 6, offset: 0 }}
+          lg={{ size: 7, offset: 0 }}
           xl={{ size: 6, offset: 0 }}
           className="d-inline-flex align-items-end"
         >
-          <span className="display-4">My food log</span>
+          <span className="display-4">Eugene food log</span>
         </Col>
         <Col
           className="pt-3 d-inline-flex align-items-center justify-content-center"
           xs={{ size: 9, offset: 0 }}
           md={{ size: 4, offset: 0 }}
-          lg={{ size: 5, offset: 0 }}
+          lg={{ size: 4, offset: 0 }}
           xl={{ size: 5, offset: 0 }}
         >
           <Row className="d-inline-flex">

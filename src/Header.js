@@ -13,12 +13,13 @@ const Header = () => {
 
   return (
     <>
-      <Row className="justify-content-between">
-        <Col xs={8}>
+      <Row className="justify-content-between mt-2">
+        <Col xs={8} md={5} lg={10}>
           <FontAwesomeIcon icon={faCarrot} size="2x" pull="left" color="#6c757d" />
-          <p className="mr-2 my-logo-text">Eugene calories counter</p>
+          <p className="my-logo-text">Calories counter app</p>
         </Col>
-        <Col className="mt-1" xs={4} md={1} lg={2}>
+
+        <Col xs={2} md={1} lg={2}>
           <Button outline color="secondary" onClick={changeModalState}>
             About
           </Button>

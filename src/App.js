@@ -100,42 +100,46 @@ function App() {
   }, []);
 
   return (
-    <div className="container">
-      <Row>
-        <Col xs={12} className="mb-3">
-          <Header counters={counters} />
-        </Col>
+    <Row>
+      <Col
+        xs={{ size: 11, offset: 0 }}
+        md={{ size: 11, offset: 0 }}
+        lg={{ size: 10, offset: 1 }}
+        xl={{ size: 11, offset: 1 }}
+        // className="mb-3 ml-2"
+      >
+        <Header counters={counters} />
+      </Col>
 
-        <Col
-          xs={{ size: 12, offset: 0 }}
-          md={{ size: 11, offset: 1 }}
-          lg={{ size: 10, offset: 1 }}
-          xl={{ size: 9, offset: 1 }}
-        >
-          <Jumbotron fluid className="pb-0 pt-5">
-            <Container fluid>
-              <Stats counters={counters} />
-              <hr className="my-2" />
-              <p className="lead">Search for any product and click Add button</p>
-              <AddModuleDashboard addCounter={addCounter} />
-            </Container>
-          </Jumbotron>
-        </Col>
+      <Col
+        xs={{ size: 12, offset: 0 }}
+        md={{ size: 12, offset: 0 }}
+        lg={{ size: 10, offset: 1 }}
+        xl={{ size: 10, offset: 1 }}
+      >
+        <Jumbotron fluid className="pb-0 pt-5">
+          <Container fluid>
+            <Stats counters={counters} />
+            <hr className="my-2" />
+            <p className="lead">Search for any product and click Add button</p>
+            <AddModuleDashboard addCounter={addCounter} />
+          </Container>
+        </Jumbotron>
+      </Col>
 
-        <Col
-          xs={{ size: 12, offset: 0 }}
-          md={{ size: 11, offset: 1 }}
-          lg={{ size: 10, offset: 1 }}
-          xl={{ size: 9, offset: 1 }}
-        >
-          <CounterDashboard
-            counters={counters}
-            deleteCounter={deleteCounter}
-            changeValue={changeValue}
-          />
-        </Col>
-      </Row>
-    </div>
+      <Col
+        xs={{ size: 12, offset: 0 }}
+        md={{ size: 12, offset: 0 }}
+        lg={{ size: 10, offset: 1 }}
+        xl={{ size: 10, offset: 1 }}
+      >
+        <CounterDashboard
+          counters={counters}
+          deleteCounter={deleteCounter}
+          changeValue={changeValue}
+        />
+      </Col>
+    </Row>
   );
 }
 
