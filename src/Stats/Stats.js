@@ -8,9 +8,15 @@ const Stats = props => {
     return acc + Math.round(el.calories) * el.qnt;
   }, 0);
 
-  const percent = Math.round((totalCalories * 100) / 3000);
+  // const percent = Math.round((totalCalories * 100) / 3000);
   const caloriesProgressColor =
-    percent === 0 ? 'muted' : percent < 51 ? 'success' : percent < 101 ? 'warning' : 'danger';
+    totalCalories === 0
+      ? 'muted'
+      : totalCalories < 1501
+      ? 'success'
+      : totalCalories < 3001
+      ? 'warning'
+      : 'danger';
 
   return (
     <>
@@ -22,7 +28,7 @@ const Stats = props => {
           xl={{ size: 6, offset: 0 }}
           className="d-inline-flex align-items-end"
         >
-          <span className="display-4">Eugene food log</span>
+          <span className="display-4 cursor-default">Eugene food log</span>
         </Col>
         <Col
           className="pt-3 d-inline-flex align-items-center justify-content-center"
@@ -32,7 +38,7 @@ const Stats = props => {
           xl={{ size: 5, offset: 0 }}
         >
           <Row className="d-inline-flex">
-            <h2 className="text-center">
+            <h2 className="text-center cursor-default">
               <Badge color={caloriesProgressColor}>{`Total ${totalCalories} cal`}</Badge>
             </h2>
           </Row>

@@ -16,7 +16,7 @@ const Header = () => {
       <Row className="justify-content-between mt-2">
         <Col xs={8} md={5} lg={10}>
           <FontAwesomeIcon icon={faCarrot} size="2x" pull="left" color="#6c757d" />
-          <p className="my-logo-text">Calories counter app</p>
+          <p className="my-logo-text cursor-default">Calories counter app</p>
         </Col>
 
         <Col xs={2} md={1} lg={2}>

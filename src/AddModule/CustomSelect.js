@@ -11,7 +11,7 @@ const CustomSelect = props => {
 
   const optionsFormatted = options.map(el => ({
     value: el._id,
-    label: `${el.itemName} calories: ${el.calories}`,
+    label: `${el.itemName}, calories: ${el.calories}`,
   }));
 
   const fetchOnInput = async value => {

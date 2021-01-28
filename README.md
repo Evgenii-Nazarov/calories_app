@@ -1,68 +1,36 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Welcome to Eugene calories app!
 
-## Available Scripts
+It is my version of the most popular front-end interview question - make **a Counter app using React**. I continuously face this task during interviews, so creating a demo application for these cases might be a good idea!
 
-In the project directory, you can run:
+**A Netlify deployed version**: https://eugene-nazarov-calories-app.netlify.app/
 
-### `yarn start`
+**Stack** :
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- JavaScript ES6
+- React
+- HTML5
+- Node.JS
+- Bootstrap
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Features
 
-### `yarn test`
+The main idea of this application is **to help control nutrition**. Add food, track calories, and compare with your norm! In this version, daily norm set for 3000 calories.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Basic functionality
 
-### `yarn build`
+1. A customer can **add any product** to a list with the use of a custom form.
+2. Use arrows or input field to **change the product quantity**.
+3. Press icon with × to **delete the product**.
+4. The total amount of calories recounts automatically after any changes.
+5. There are tree calories' levels depends on which color of Total calories changes:
+   - Less than 51% - Green
+   - From 51% to 100% - Orange
+   - More than 101% - Red
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Third-party API
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+I decided to add some real-life data, so the application fetches food nutrition data from a third-party API service **Nutritionix**. They provide complete great quality information about any food: brand name, photo, weight, more than 20 titles of energy values, serving size, and so on. A link to full documentation: https://developer.nutritionix.com/docs/v2
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Storage
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+List of a customer products is stored in Browser Local Storage.

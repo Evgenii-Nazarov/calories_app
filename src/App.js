@@ -120,8 +120,8 @@ function App() {
         <Jumbotron fluid className="pb-0 pt-5">
           <Container fluid>
             <Stats counters={counters} />
-            <hr className="my-2" />
-            <p className="lead">Search for any product and click Add button</p>
+            <hr className="my-2 cursor-default" />
+            <p className="lead cursor-default">Search for any product and click Add button</p>
             <AddModuleDashboard addCounter={addCounter} />
           </Container>
         </Jumbotron>
