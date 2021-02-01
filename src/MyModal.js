@@ -22,7 +22,7 @@ const MyModal = props => {
           </p>
           <p className="mb-3">A third-party API named Nutritionix provides food nutrition data</p>
           <p>
-            Deployed at Heroku. Here is{' '}
+            Deployed at Netlify. Here is{' '}
             <a
               target="_blank"
               rel="noopener noreferrer"
