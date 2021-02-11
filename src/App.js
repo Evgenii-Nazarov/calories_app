@@ -106,7 +106,6 @@ function App() {
         md={{ size: 11, offset: 0 }}
         lg={{ size: 10, offset: 1 }}
         xl={{ size: 11, offset: 1 }}
-        // className="mb-3 ml-2"
       >
         <Header counters={counters} />
       </Col>
